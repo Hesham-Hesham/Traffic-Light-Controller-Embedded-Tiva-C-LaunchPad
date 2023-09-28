@@ -1,1 +1,1 @@
-# Traffic-Light-Controller-Embedded---Tiva-C-LaunchPad
+# Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad
