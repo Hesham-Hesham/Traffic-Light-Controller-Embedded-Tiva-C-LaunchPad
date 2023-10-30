@@ -7,7 +7,7 @@ The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based o
 
 - [System Overview](#system-overview)
 - [Requirements](#requirements)
-- [Drivers' Requirements](#Drivers' Requirements)
+- [Drivers' Requirements](#drivers'-requirements)
 - [Components](#components)
 - [Circuit Diagram](#circuit-diagram)
 - [Usage](#usage)
