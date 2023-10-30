@@ -5,10 +5,10 @@ The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based o
 
 ## Table of Contents
 
-- [System Features](#System-Features)
+- [System Features](#system-features)
 - [Requirements](#requirements)
 - [Drivers Requirements](#drivers-requirements)
-- [Software Features](#Software-Features)
+- [Software Features](#software-features)
 - [Components](#components)
 - [Electric Circuit](#electric-circuit)
 - [Usage](#usage)
@@ -45,6 +45,13 @@ For the full detailed system sequence and components requirements, check [The Pr
 ### Layered Architecture
 
 ![Layered architecture](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/e01206d3-8be0-4051-98c4-0b5483aed2e1)
+
+### Drivers Initialization
+
+They're intialized with the sequence presented in this diagram:
+
+![1](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/52899d06-bf46-469d-a301-2b5151ae4d1c)
+
 
 
 
