@@ -7,7 +7,7 @@ The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based o
 
 - [System Overview](#system-overview)
 - [Requirements](#requirements)
-- [Drivers' Requirements](#drivers'-requirements)
+- [Drivers Requirements](#drivers-requirements)
 - [Components](#components)
 - [Circuit Diagram](#circuit-diagram)
 - [Usage](#usage)
@@ -27,7 +27,7 @@ Interrupt Handling: The system can handle interruptions caused by pedestrian cro
 
 For the full detailed system sequence and components requirements, check [The Project requirements file](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/blob/main/Requirements.pdf)
 
-## Drivers' Requirements
+## Drivers Requirements
 
 ### HAL
 - LEDs Driver
