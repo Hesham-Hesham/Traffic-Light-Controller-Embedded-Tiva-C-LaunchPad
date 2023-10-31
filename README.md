@@ -1,6 +1,6 @@
 #  Traffic Light Control System - Tiva C LaunchPad
 
-This project comprises of a traffic light control system that manages two car traffic lights (North-South and East-West) and two pedestrian traffic lights, one for each car traffic light. The system is equipped with push buttons for pedestrians to press and safely cross the street.
+This project comprises of a traffic light control system that manages two car traffic lights (North-South and East-West) and two pedestrian traffic lights, one for each car traffic light. The system is equipped with two push buttons for pedestrians to press and safely cross the street.
 The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based on the Arm Cortex-M4F microcontroller. This system is also designed based on a layered architecture model for maxiumum efficiency and modular functionality.
 
 ## Table of Contents
