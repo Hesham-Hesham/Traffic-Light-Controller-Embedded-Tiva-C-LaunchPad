@@ -1,7 +1,8 @@
 #  Traffic Light Control System - Tiva C LaunchPad
 
 This project comprises of a traffic light control system that manages two car traffic lights (North-South and East-West) and two pedestrian traffic lights, one for each car traffic light. The system is equipped with two push buttons for pedestrians to press and safely cross the street.
-The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based on the Arm Cortex-M4F microcontroller. This system is also designed based on a layered architecture model for maxiumum efficiency and modular functionality.
+The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based on the Arm Cortex-M4F microcontroller. This system is also designed based on a layered architecture model with configurable drivers 
+ for maxiumum efficiency and modular functionality.
 
 ## Table of Contents
 
@@ -10,6 +11,7 @@ The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based o
 - [Drivers Requirements](#drivers-requirements)
 - [Software Features](#software-features)
 - [Components](#components)
+- [Working Video](#working-video)
 - [Electric Circuit](#electric-circuit)
 - [Usage](#usage)
 
@@ -166,7 +168,7 @@ typedef struct{
    - Current-limiting resistors for the LEDs to prevent them from 
 
 5. **Power Supply:**
-   - A stable power supply (a 9V battery) for the LEDs.
+   - A stable DC power supply for the LEDs.
 
 6. **BC549 Transistors:**  
     - Used as gates for the LED current. (Check the electric circuit section)
@@ -207,7 +209,20 @@ typedef struct{
 
 <br/><br/>
 
+### Real Photos
+![1](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/d724eeeb-30c4-4b3b-9429-3cc3cc87bd19)
+
+![2](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/1e2a31ae-d0b3-425c-89ab-70e364179616)
+
+![3](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/e43d6c73-d469-48da-9804-4779cd6eb718)
+
+![4](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/eccc245f-4435-4480-bda9-0ba59c9e2280)
+
 ---
+
+## Working Video
+
+You can watch the project working irl [Here !](https://drive.google.com/file/d/15a2oQPOUUbti-yfZZS-AmDD-GLCu69gS/view?usp=sharing).
 
 
 ## Usage
