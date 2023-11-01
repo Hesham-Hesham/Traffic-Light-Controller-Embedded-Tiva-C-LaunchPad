@@ -28,7 +28,7 @@ Interrupt Handling: The system can handle interruptions caused by pedestrian cro
 
 ## Requirements
 
-For the full detailed system sequence and components requirements, check [The Project requirements file](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/blob/main/Requirements.pdf)
+For the full detailed system sequence and components requirements, check [The Project requirements file](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/blob/main/Requirements.pdf).
 
 ## Drivers Requirements
 
@@ -120,7 +120,7 @@ typedef struct{
 
 ### Special Pins Protection
 
-- By looking at the datasheet we can see that some of the pins have alternative/special functions
+- By looking at the datasheet we can see that some of the pins have alternative/special functions: 
 ![GPIO with special pins](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/f01709c9-8cce-4111-a197-9fd100feb774)
 >So to protect these pins from accidently being initialized or used as GPIO after being initialized or used as something else in another driver, a special-pins-preprocessor-guard was added:
 ```
@@ -136,7 +136,7 @@ typedef struct{
 			}
 #endif
 ```
-~ The above code means: Avoid initializing pin 7 of PORTD if protection is enabled (if it's not unlocked or commited it won't be initialized)
+~ The above code means: Avoid initializing pin 7 of PORTD if protection is enabled (if it's not unlocked or commited it won't be initialized).
 
 ----
 - The most cruical special pins are the JTAG pins in port C since writing on them locks the TivaC board and makes it unusable till it gets unlocked again using a special software app, thus another specific guard was added to make sure that JTAG pins are protected special-pins-preprocessor-guard was added: 
@@ -165,16 +165,16 @@ typedef struct{
    - Two push buttons for pedestrian crossings, one for each direction.
 
 4. **Resistors:**
-   - Current-limiting resistors for the LEDs to prevent them from 
+   - Current-limiting resistors for the LEDs to prevent them from burning out.
 
 5. **Power Supply:**
    - A stable DC power supply for the LEDs.
 
 6. **BC549 Transistors:**  
-    - Used as gates for the LED current. (Check the electric circuit section)
+    - Used as gates for the LED current. (Check the electric circuit section).
 
 7. **Voltage Regulator:**
-    - To provide a stable 5V to the systems
+    - To provide a stable 5V to the systems.
 
 
 
@@ -202,7 +202,7 @@ typedef struct{
 
 ### Push buttons
 
-- The Pull-Up resistor configuration was used in hardware connection as well as software PUSH_BUTTONS driver confiuration
+- The Pull-Up resistor configuration was used in hardware connection as well as software PUSH_BUTTONS driver confiuration:
 
 ![pull up](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/75b88aa9-00cc-4d15-84d6-978a22e2d9b2)
 
@@ -245,6 +245,6 @@ You can watch the project working irl [Here !](https://drive.google.com/file/d/1
 
 ---
 ##### Acknoledgement
-- Some of the screenshots are taken from the "Interfacing an LED with TIVA C Series LaunchPad" video made by [Mechatronics Engineer Youtube Channel](https://www.youtube.com/@mechatronicsengineer1979)
+- Some of the screenshots are taken from the "Interfacing an LED with TIVA C Series LaunchPad" video made by [Mechatronics Engineer Youtube Channel](https://www.youtube.com/@mechatronicsengineer1979).
 
-- Registers mapping file "tm4c123gh6pm_registers.h" was made by engineer mohamed tarek
+- Registers mapping file "tm4c123gh6pm_registers.h" was made by engineer mohamed tarek.
