@@ -7,6 +7,7 @@
 #include "common_macros.h" /* To use the macros like SET_BIT */
 #include "std_types.h"		/* To use the standard types like uint8 */
 
+#include "tm4c123gh6pm_registers.h" /* Only to enable global interrupts and faults */
 
 
 
@@ -65,14 +66,18 @@ int main()
 	LEDS_turnOffAllTraffic();
 	LEDS_turnOn(PEDESTRIAN_NORTH_RED);
 	LEDS_turnOn(PEDESTRIAN_EAST_RED);
-
+	LEDS_turnOn(TRAFFIC_NORTH_RED);
+	LEDS_turnOn(TRAFFIC_EAST_RED);
+	
 	for(;;){
 		
 		/* Rolling action where :
 		-green is on for 5 seconds
 		-yellow is on for 2 seconds
-		-red is on for 1 */
-			
+		-red is on for 1 then the other traffic
+		is operated in the same sequence*/
+		
+			LEDS_turnOff(TRAFFIC_NORTH_RED);
 			LEDS_turnOn(TRAFFIC_NORTH_GREEN);
 			DELAY_seconds(5);
 			LEDS_turnOff(TRAFFIC_NORTH_GREEN);
@@ -83,9 +88,10 @@ int main()
 
 			LEDS_turnOn(TRAFFIC_NORTH_RED);
 			DELAY_seconds(1);
-			LEDS_turnOff(TRAFFIC_NORTH_RED);
 
 			
+
+			LEDS_turnOff(TRAFFIC_EAST_RED);
 			LEDS_turnOn(TRAFFIC_EAST_GREEN);
 			DELAY_seconds(5);
 			LEDS_turnOff(TRAFFIC_EAST_GREEN);
@@ -96,7 +102,7 @@ int main()
 
 			LEDS_turnOn(TRAFFIC_EAST_RED);
 			DELAY_seconds(1);
-			LEDS_turnOff(TRAFFIC_EAST_RED);
+
 	}
 	return 0;
 }
@@ -125,13 +131,15 @@ void init_drivers(void){
 void pedestrian_handler(void){
 	
 	//Save the last active light before turning it off
-	uint8 lastActiveLED = LEDS_readAllTrafficLeds();
-	LEDS_turnOff(lastActiveLED);
+	uint8 lastActiveLED = 0;
 	
 	// LEDS_turnOffAllTraffic();
 	
 	if(north_button==PB_PRESSED){
 		
+		lastActiveLED = LEDS_readAllTrafficLeds(NORTH_);
+		LEDS_turnOff(lastActiveLED);
+
 		//Stop the green north traffic to allow north pedestrians to pass
 		LEDS_turnOn(TRAFFIC_NORTH_RED);
 
@@ -157,10 +165,16 @@ void pedestrian_handler(void){
 		//Reset the north_button state
 		north_button=PB_RELEASED;
 		
-		
+		LEDS_turnOff(TRAFFIC_NORTH_RED);
+
 	}
 	if(east_button==PB_PRESSED){
 
+		
+		lastActiveLED = LEDS_readAllTrafficLeds(EAST_);
+		LEDS_turnOff(lastActiveLED);
+		
+		
 		//Stop the green east traffic to allow east pedestrians to pass		
 		LEDS_turnOn(TRAFFIC_EAST_RED);
 
@@ -187,10 +201,13 @@ void pedestrian_handler(void){
 		//Reset the east_button state
 		east_button=PB_RELEASED;
 
+		
+		LEDS_turnOff(TRAFFIC_EAST_RED);
+
 	}
 	
 	//Turn off all the traffic lights
-	LEDS_turnOffAllTraffic();
+	//LEDS_turnOffAllTraffic();
 	
 	//Resume the last active light with the saved counter value
 	LEDS_turnOn(lastActiveLED);

@@ -77,7 +77,13 @@
 /*******************************************************************************
  *                               Types Declaration                             *
  *******************************************************************************/
- 
+//Traffic Sides
+typedef enum{
+	
+	NORTH_,EAST_
+	
+}LEDS_trafficSides; 
+	 
  
 //Traffic LEDS
 typedef enum{
@@ -150,8 +156,8 @@ void LEDS_turnOffAllTraffic(void);
 
 /*
  * Description :
- * Function responsible for reading leds to checks which one is turned on and return the first one that's turned on
+ * Function responsible for reading leds on a given side to checks which one is turned on and return the first one that's turned on
  */
-uint8 LEDS_readAllTrafficLeds(void);
+uint8 LEDS_readAllTrafficLeds(uint8 traffic_side);
 
 #endif

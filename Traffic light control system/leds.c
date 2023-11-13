@@ -173,51 +173,57 @@ bool LEDS_read(uint8 led){
  * Description :
  * Function responsible for reading leds to checks which one is turned on and return the first one that's turned on
  */
-uint8 LEDS_readAllTrafficLeds(void){
+uint8 LEDS_readAllTrafficLeds(uint8 traffic_side){
 	
 	uint8 firstTurnedOnLed=0;
 	
-	//Check if the led is on and if so, then return that led
-	firstTurnedOnLed=LEDS_read(TRAFFIC_NORTH_RED);
-	if(firstTurnedOnLed==LED_ON){
-		firstTurnedOnLed=TRAFFIC_NORTH_RED;
-		return firstTurnedOnLed;
+	if(traffic_side == NORTH_){
+		//Check if the led is on and if so, then return that led
+		firstTurnedOnLed=LEDS_read(TRAFFIC_NORTH_RED);
+		if(firstTurnedOnLed==LED_ON){
+			firstTurnedOnLed=TRAFFIC_NORTH_RED;
+			return firstTurnedOnLed;
+		}
+		
+		//Check if the led is on and if so, then return that led
+		firstTurnedOnLed=LEDS_read(TRAFFIC_NORTH_YELLOW);
+		if(firstTurnedOnLed==LED_ON){
+			firstTurnedOnLed=TRAFFIC_NORTH_YELLOW;
+			return firstTurnedOnLed;
+		}
+		
+		//Check if the led is on and if so, then return that led
+		firstTurnedOnLed=LEDS_read(TRAFFIC_NORTH_GREEN);
+		if(firstTurnedOnLed==LED_ON){
+			firstTurnedOnLed=TRAFFIC_NORTH_GREEN;
+			return firstTurnedOnLed;
+		}
+	
 	}
 	
-	//Check if the led is on and if so, then return that led
-	firstTurnedOnLed=LEDS_read(TRAFFIC_NORTH_YELLOW);
-	if(firstTurnedOnLed==LED_ON){
-		firstTurnedOnLed=TRAFFIC_NORTH_YELLOW;
-		return firstTurnedOnLed;
+	if(traffic_side == EAST_){
+		//Check if the led is on and if so, then return that led
+		firstTurnedOnLed=LEDS_read(TRAFFIC_EAST_RED);
+		if(firstTurnedOnLed==LED_ON){
+			firstTurnedOnLed=TRAFFIC_EAST_RED;
+			return firstTurnedOnLed;
+		}
+		
+		//Check if the led is on and if so, then return that led
+		firstTurnedOnLed=LEDS_read(TRAFFIC_EAST_YELLOW);
+		if(firstTurnedOnLed==LED_ON){
+			firstTurnedOnLed=TRAFFIC_EAST_YELLOW;
+			return firstTurnedOnLed;
+		}
+		
+		//Check if the led is on and if so, then return that led
+		firstTurnedOnLed=LEDS_read(TRAFFIC_EAST_GREEN);
+		if(firstTurnedOnLed==LED_ON){
+			firstTurnedOnLed=TRAFFIC_EAST_GREEN;
+			return firstTurnedOnLed;
+		}
 	}
 	
-	//Check if the led is on and if so, then return that led
-	firstTurnedOnLed=LEDS_read(TRAFFIC_NORTH_GREEN);
-	if(firstTurnedOnLed==LED_ON){
-		firstTurnedOnLed=TRAFFIC_NORTH_GREEN;
-		return firstTurnedOnLed;
-	}
-	
-	//Check if the led is on and if so, then return that led
-	firstTurnedOnLed=LEDS_read(TRAFFIC_EAST_RED);
-	if(firstTurnedOnLed==LED_ON){
-		firstTurnedOnLed=TRAFFIC_EAST_RED;
-		return firstTurnedOnLed;
-	}
-	
-	//Check if the led is on and if so, then return that led
-	firstTurnedOnLed=LEDS_read(TRAFFIC_EAST_YELLOW);
-	if(firstTurnedOnLed==LED_ON){
-		firstTurnedOnLed=TRAFFIC_EAST_YELLOW;
-		return firstTurnedOnLed;
-	}
-	
-	//Check if the led is on and if so, then return that led
-	firstTurnedOnLed=LEDS_read(TRAFFIC_EAST_GREEN);
-	if(firstTurnedOnLed==LED_ON){
-		firstTurnedOnLed=TRAFFIC_EAST_GREEN;
-		return firstTurnedOnLed;
-	}
 	
 	return firstTurnedOnLed;
 

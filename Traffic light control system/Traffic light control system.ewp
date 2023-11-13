@@ -1877,6 +1877,9 @@
     </settings>
   </configuration>
   <file>
+    <name>$PROJ_DIR$\APP.c</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\common_macros.h</name>
   </file>
   <file>
@@ -1905,9 +1908,6 @@
   </file>
   <file>
     <name>$PROJ_DIR$\leds.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\main.c</name>
   </file>
   <file>
     <name>$PROJ_DIR$\push_buttons.c</name>
