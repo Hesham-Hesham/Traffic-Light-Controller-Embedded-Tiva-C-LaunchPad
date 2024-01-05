@@ -6,14 +6,21 @@ This project comprises of a traffic light control system that manages two car tr
 The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based on the Arm Cortex-M4F microcontroller. This system is also designed based on a layered architecture model with configurable drivers 
  for maxiumum efficiency and modular functionality.
 
+---
+
+## Working Video
+
+You can watch the project working irl [Here !](https://drive.google.com/file/d/15a2oQPOUUbti-yfZZS-AmDD-GLCu69gS/view?usp=sharing)
+
+---
 ## Table of Contents
 
+- [Working Video](#working-video)
 - [System Features](#system-features)
 - [Requirements](#requirements)
 - [Drivers Requirements](#drivers-requirements)
 - [Software Features](#software-features)
 - [Components](#components)
-- [Working Video](#working-video)
 - [Electric Circuit](#electric-circuit)
 - [Usage](#usage)
 
@@ -221,10 +228,6 @@ typedef struct{
 ![4](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/eccc245f-4435-4480-bda9-0ba59c9e2280)
 
 ---
-
-## Working Video
-
-You can watch the project working irl [Here !](https://drive.google.com/file/d/15a2oQPOUUbti-yfZZS-AmDD-GLCu69gS/view?usp=sharing).
 
 
 ## Usage
