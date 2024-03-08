@@ -1,7 +1,12 @@
 #  Traffic Light Control System - Tiva C LaunchPad
 
 ## Objective
-This project comprises of a traffic light control system that manages two car traffic lights (North-South and East-West) and two pedestrian traffic lights, one for each car traffic light. The system is equipped with two push buttons for pedestrians to press and safely cross the street.
+<br></br>
+
+![Map](https://github.com/Hesham-Hesham/Traffic-Light-Controller-Embedded-Tiva-C-LaunchPad/assets/91581641/3b5a17ec-8427-4989-b77c-1be377b5f124)
+
+This project comprises of a traffic light control system that manages an intersection that works in two directions (North-South and East-West). It's controlled by two car traffic lights and two pedestrian traffic lights, one for each direction. The system is equipped with two push buttons for pedestrians to press and safely cross the street.
+
 <br></br>
 The project leverages the TM4C123GH6PM LaunchPad evaluation kit which is based on the Arm Cortex-M4F microcontroller. This system is also designed based on a layered architecture model with configurable drivers 
  for maxiumum efficiency and modular functionality.
@@ -251,5 +256,5 @@ typedef struct{
 ---
 ##### Acknoledgement
 - Some of the screenshots are taken from the "Interfacing an LED with TIVA C Series LaunchPad" video made by [Mechatronics Engineer Youtube Channel](https://www.youtube.com/@mechatronicsengineer1979).
-
+- Traffic light image, courtesy of Sridhar Rajagopal
 - Registers mapping file "tm4c123gh6pm_registers.h" was made by engineer mohamed tarek.
